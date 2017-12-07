@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accessible Date Picker</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" href="//assets.cms.gov/resources/libs/datepicker/v6/css/datepicker.css" />
+<script type="text/javascript" src="//assets.cms.gov/resources/libs/datepicker/v6/js/datepicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" id="additionalCss1" class="pageSpecific">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	</head>
+<body>
+	<div>
+		<h1>Accessible Date Picker</h1>
+		<label for="demo1">Date of Birth</label><br />
+	<input type="text" class="select_date dob" id="demo1" name="demo-1" value="" maxlength="10" aria-describedby="demo1HelpText" />
+								    <br />
+		<p class="supportText blockElement" id="demo1HelpText"><br />
+									    <span class="HiddenText">Expected format: </span>M<span class="HiddenText"> </span>M/D<span class="HiddenText"> </span>D/Y<span class="HiddenText"> </span>Y<span class="HiddenText"></span>Y<span class="HiddenText"> </span>Y
+								    </p>
+							    </form>
+						    </div>
+
+
+	</div>
+	<div>
+		
+	  <h2>Keyboard Operations</h2>
+	    
+		<h3>Arrow Up and Down</h3>
+	    <p>goes to the same day of the week in the previous or next week respectively. If the user advances past the end of the month they continue into the next or previous month as appropriate.</p>
+		
+		<h3>Arrow Left and Right</h3>
+      <p>advances one day to the next, also in a continuum. Visually focus is moved from day to day and wraps from row to row in a grid of days and weeks.</p>
+		<h3>Alt Page Up</h3>
+		<p>Moves to the same date in the previous year</p>
+		
+		<h3>Alt Page Down</h3>
+		<p>Moves to the same date in the next year</p>
+		
+		<h3>Home</h3>
+		<p>Moves to the first day of the current month.</p>
+		
+		<h3>End</h3>
+		<p>Moves to the last day of the current month.</p>
+		
+		<h3>Page Up</h3>
+		<p>Moves to the same date in the previous month.</p>
+		
+		<h3>Page Down</h3>
+		<p>Moves to the same date in the next month</p>
+		
+		<h3>Enter Key</h3>
+		<p>Submits the form</p>
+		
+		<h3>Escape</h3>
+		<p>in the case of a popup date picker, closes the widget without any action.</p>
+		<h4>Note:</h4><p> Navigation into the past is optional</p>
+</div>
+
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+	<script type="text/javascript" src="//assets.cms.gov/resources/libs/datepicker/v6/js/datepicker.js"></script> 
+	<script type="text/javascript">
+    $(function () {
+        datePickerController.createDatePicker({
+            // Associate the text input to a DD/MM/YYYY date format                            
+            formElements: { "demo1": "%m/%d/%Y" },
+            noFadeEffect: true,
+            labelText: "Date of birth"
+        });
+    });
+</script>
+</body>
+</html>
